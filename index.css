@@ -1,0 +1,46 @@
+.split-container {
+    display: flex;
+    height: 70vh;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.split.right {
+    flex: 0 0 50%;
+    background-image: url("back.jpg");
+    background-size: cover;
+    background-position: center;
+    
+}
+
+.split.left {
+    flex: 0 0 50%;
+    background-color: #80D39B;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10%;
+    position: relative;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 30px;
+    background-color: var(--primary);
+    color: var(--foreground);
+    border-radius: 5px;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.split.left::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -50px;
+    width: 20%;
+    height: 70vh;
+    background-color: #80D39B;
+    clip-path: polygon(0 0, 100% 0, 76% 100%, 0% 100%);
+}
